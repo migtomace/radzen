@@ -107,73 +107,83 @@ showMap();
             //            var package = document.getElementsByName('package').value;
             //            var payment = document.getElementsByName('payment').value;
 
-            var isValid = false;
-            var none = false;
+            var isValid = true;
 
 
             //validate first name not empty
             if (fname == "") {
                 document.getElementById('fnFB').innerHTML = "* This is Required";
                 isValid = false;
-//            }if (isNaN(fname)) {
-//                document.getElementById('fnFB').innerHTML = "* Please enter letters only."
-//                isValid = false;
-            }else {
+            }else if (isValid!=false) {
                 document.getElementById('fnFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('fnFB').innerHTML = "";
             }
 
             //validate last name not empty
             if (lname == "") {
                 document.getElementById('lnFB').innerHTML = "* This is Required";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('lnFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('lnFB').innerHTML = "";
             }
 
             //validate email not empty
             if (email == "" || !email.includes("@") || !email.includes(".")) {
                 document.getElementById('emailFB').innerHTML = "* This is not a valid email address.";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('emailFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('emailFB').innerHTML = "";
             }
 
             //validate address not empty
             if (address == "") {
                 document.getElementById('addressFB').innerHTML = "* This is Required";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('addressFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('addressFB').innerHTML = "";
             }
 
             //validate city not empty
             if (city == "") {
                 document.getElementById('cityFB').innerHTML = "* This is Required";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('cityFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('cityFB').innerHTML = "";
             }
 
             //validate state not empty
             if (states == "choose") { document.getElementById('stateFB').innerHTML = "* This is Required"; 
                 isValid = false; 
-            } else { 
+            } else if (isValid!=false) {
                 document.getElementById('stateFB').innerHTML = "";
                 isValid = true; 
+            } else {
+                document.getElementById('stateFB').innerHTML = "";
             }
         
             //validate zipcode not empty
             if (zipcode == "") {
                 document.getElementById('zipcodeFB').innerHTML = "* This is Required";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('zipcodeFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('zipcodeFB').innerHTML = "";
             }
 
             //validate package not empty
@@ -184,9 +194,11 @@ showMap();
             if ((pack1 == false) && (pack2 == false)) {
                 document.getElementById('packageFB').innerHTML = "* This is required";
                 isValid = false;
-            } else {
+            } else if (isValid!=false) {
                 document.getElementById('packageFB').innerHTML = "";
                 isValid = true;
+            } else {
+                document.getElementById('packageFB').innerHTML = "";
             }
 
             //validate payment not empty
